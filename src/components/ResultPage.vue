@@ -6,8 +6,8 @@
         <!-- cols="12" 会使 v-col 在小屏幕上占满整个宽度，在 md 屏幕尺寸和以上居中 -->
         <v-col cols="12" md="6" lg="4">
           <!-- 添加 text-center 类使文本在其容器中居中 -->
-          <h1 class="text-h4 py-4 text-center">性格类型分析</h1>
-          <h2 class="text-center">({{ personalityType }})性格</h2>
+          <h1 class="text-h4 py-4 text-center">你大概率是：</h1>
+          <h2 class="text-center">({{ personalityType }})性格的人</h2>
           <div v-for="(description, index) in personalityDescriptions" :key="index" class="my-4">
             <v-card class="custom-card elevation-3" :class="{ 'hover-elevation-6': hover }" @mouseover="hover = true" @mouseleave="hover = false">
               <v-card-title class="custom-card-title subtitle-1">

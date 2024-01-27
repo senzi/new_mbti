@@ -8,7 +8,7 @@
               NEW-MBTI 测试平台
             </v-card-title>
             <v-card-text>
-              <p class="text-center">目前阶段暂时不提供测试服务。请移步到性格类型页面查看。</p>
+              <p class="text-center">目前阶段暂时不提供测试服务。<br>请移步到性格类型页面查看。</p>
             </v-card-text>
             <v-card-actions class="justify-center">
               <v-btn color="primary" to="/personality-types" class="my-2">

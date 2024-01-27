@@ -30,9 +30,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'LXGWWenKaiScreen', sans-serif;
-}
 html, body {
   max-width: 100%;
   overflow-x: auto;
