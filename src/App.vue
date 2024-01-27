@@ -2,13 +2,16 @@
   <v-app>
     <v-app-bar>
       <v-app-bar-nav-icon>
-        <img src="./assets/logo.png" alt="logo"/>
+               <router-link to="/">
+                  <v-avatar size="50">
+                    <v-img src="/logo.png" alt="logo"></v-img>
+                  </v-avatar>
+                </router-link>
       </v-app-bar-nav-icon>
 
       <v-toolbar-title>NEW MBTI</v-toolbar-title>
       
       <v-tabs>
-        <v-tab href="/">首页</v-tab>
         <v-tab href="/personality-types">性格类型</v-tab>
         <v-tab href="/personality-test">性格测试</v-tab>
       </v-tabs>
@@ -25,3 +28,13 @@ export default {
   name: 'App'
 };
 </script>
+
+<style>
+#app {
+  font-family: 'LXGWWenKaiScreen', sans-serif;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: auto;
+}
+</style>

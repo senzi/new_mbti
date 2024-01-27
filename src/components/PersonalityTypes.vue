@@ -2,7 +2,7 @@
   <v-main>
     <v-container>
       <h1>你的性格类型：</h1>
-      <h2 v-if="computedPersonalityType">{{ computedPersonalityType }}</h2>
+      <h2 v-if="computedPersonalityType" class="personality-type">{{ computedPersonalityType }}</h2>
       <p v-else>性格类型将在选择完毕后显示。</p>
       <p v-if="computedPersonalityDescription">{{ computedPersonalityDescription }}</p>
       <!-- 生成range sliders -->
@@ -12,15 +12,16 @@
         </div>
         <v-slider
           v-model="item.value"
-          thumb-label="always"
-          step="1"
-          thumb-color="red"
+          color="orange"
           track-color="green"
-          :max="100"
+          thumb-color="purple"
+          thumb-label
           @change="updatePersonalityType"
         ></v-slider>
       </div>
-      <v-btn @click="submitPersonality">提交</v-btn>
+      <div class="text-center">
+        <v-btn color="red" @click="submitPersonality">提交</v-btn>
+      </div>
     </v-container>
   </v-main>
 </template>
@@ -154,9 +155,25 @@ export default {
 </script>
 
 <style scoped>
-.slider-label {
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: 0.5rem;
+.personality-type {
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+.slider-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-4 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* 其他样式 */
 </style>
+
